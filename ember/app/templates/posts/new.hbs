@@ -1,0 +1,8 @@
+<h4>Create new post</h4>
+<form {{action 'authenticate' on='submit'}}>
+  <label for='email'>Email</label>
+  {{input id='email' value=email}}
+  <label for='body'>Body</label>
+  {{input id='body' type='password' value=body}}
+  <button type='submit'>Submit</button>
+</form>
