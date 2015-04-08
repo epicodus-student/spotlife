@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  has_many :posts
 
  def ensure_authentication_token
    if authentication_token.blank?
@@ -11,7 +12,15 @@ class User < ActiveRecord::Base
    end
  end
 
+ def self.get_next_five
+    get_eligible.sample(5)
+ end
+
  private
+
+ def self.get_eligible
+   return 0
+ end
 
  def generate_authentication_token
    loop do
