@@ -4,7 +4,7 @@ describe User do
 
   before :each do
     @new_post = Post.create(:body => "Hello World, I'm a doctor/lawyer now.")
-    @old_post = Post.create(:body => "Hello World, I'm a doctor/lawyer now.", :created_at => (Time.now - (86400 * 40)))
+    @old_post = Post.create(:body => "Bonjour Mars, I'm a dork now.", :created_at => (Time.now - (86400 * 40)))
   end
 
   describe '.get_recent_posts' do
