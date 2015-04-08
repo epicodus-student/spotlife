@@ -1,2 +1,5 @@
 <h3>Posts</h3>
-{{outlet}}
+
+{{#each post in model}}
+<p>{{post.body}}</p>
+{{/each}}
