@@ -18,6 +18,10 @@ class User < ActiveRecord::Base
 
  private
 
+ def self.get_eligible
+   return 0
+ end
+
  def generate_authentication_token
    loop do
      token = Devise.friendly_token
