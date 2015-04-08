@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
  def self.get_eligible
    output = []
    User.all.each do |user|
-     if user.posts == nil
+     if user.posts == []
        output.push(user)
      end
    end

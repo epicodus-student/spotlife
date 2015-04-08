@@ -16,7 +16,6 @@ describe User do
 
     it 'returns five random users who have not posted.' do
       expect(User.get_next_five.class).to eq(Array)
-      binding.pry
       expect(User.get_next_five.include?(@no_post)).to eq(true)
       expect(User.get_next_five.include?(@has_post)).to eq(false)
     end
