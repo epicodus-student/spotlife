@@ -9,7 +9,9 @@ Router.map(function() {
   this.route('login');
   this.route('protected');
   this.route('signup');
-  this.resource('posts');
+  this.resource('posts', function() {
+    this.route('new')
+  });
 });
 
 export default Router;
