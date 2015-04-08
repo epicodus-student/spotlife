@@ -19,7 +19,13 @@ class User < ActiveRecord::Base
  private
 
  def self.get_eligible
-   return 0
+   output = []
+   User.all.each do |user|
+     if user.posts == nil
+       output.push(user)
+     end
+   end
+   return output
  end
 
  def generate_authentication_token
