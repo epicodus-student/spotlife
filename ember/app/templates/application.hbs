@@ -3,6 +3,8 @@
 
 {{#link-to 'index'}}Home{{/link-to}}
 {{#link-to 'protected'}}Protected{{/link-to}}
+{{#link-to 'posts'}}Posts{{/link-to}}
+
 
 {{#if session.isAuthenticated}}
   <button {{ action 'invalidateSession' }}>Logout</button>
