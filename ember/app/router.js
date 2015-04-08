@@ -5,9 +5,11 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
-export default Router.map(function() {
+Router.map(function() {
   this.route('login');
   this.route('protected');
   this.route('signup');
-  this.resource('posts')
+  this.resource('posts');
 });
+
+export default Router;
