@@ -1,0 +1,10 @@
+<h2 id="signup">Sign Up</h2>
+<form {{action 'create_user' on='submit'}}>
+  <label for='identification'>Signup</label>
+  {{input id='identification' placeholder='Enter Login' value=identification}}
+  <label for='password'>Password</label>
+  {{input id='password' placeholder='Enter Password' type='password' value=password}}
+  <label for='password_confirmation'>Confirm Password</label>
+  {{input id='password_confirmation' placeholder='Enter Password' type='password' value=password_confirmation}}
+  <button type='submit'>Login</button>
+</form>
