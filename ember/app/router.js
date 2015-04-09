@@ -12,9 +12,10 @@ Router.map(function() {
   this.resource('posts', function() {
     this.route('new');
   });
-  this.route('request_emails', function() {
+  this.resource('request_emails', function() {
     this.route('new');
   });
+  this.route('spotlight_emails');
 });
 
 export default Router;
