@@ -1,4 +1,8 @@
-class RequestEmailController < ApplicationController
+class Api::RequestEmailsController < ApplicationController
+
+  def index
+
+  end
 
   def create
     req_email = RequestEmail.new
@@ -7,5 +11,4 @@ class RequestEmailController < ApplicationController
       format.json  { render :json => msg } # don't do msg.to_json
     end
   end
-
 end

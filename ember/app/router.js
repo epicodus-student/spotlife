@@ -12,6 +12,10 @@ Router.map(function() {
   this.resource('posts', function() {
     this.route('new');
   });
+  this.route('request_emails', function() {
+    this.route('new');
+  });
+  this.route('work');
 });
 
 export default Router;

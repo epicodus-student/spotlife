@@ -1,4 +1,4 @@
-class Requestemail
+class RequestEmail
 
   def initialize
     send_mail

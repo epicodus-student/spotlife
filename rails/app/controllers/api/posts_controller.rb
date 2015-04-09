@@ -4,6 +4,7 @@ class Api::PostsController < ApplicationController
   end
 
   def create
+    binding.pry
     newPost = Post.new(post_params)
     if newPost.save
       render json: newPost, status: :created
