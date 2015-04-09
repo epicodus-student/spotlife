@@ -5,6 +5,7 @@ RSpec.describe UserMailer, type: :mailer do
     let(:mail) { UserMailer.update_request }
 
     it "renders the headers" do
+      binding.pry
       expect(mail.subject).to eq("Update request")
       expect(mail.to).to eq(["to@example.org"])
       expect(mail.from).to eq(["from@example.com"])
