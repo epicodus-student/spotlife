@@ -5,9 +5,16 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.update_request.subject
   #
-  def update_request
-    @greeting = "Hi"
+  def update_request(user)
+    @greeting = "Greetings Epicodus Alumnus"
 
-    mail to: "to@example.org"
+    mail to: user.email, subject: "What have you been up to?"
+  end
+
+  def send_spotlights(user)
+    @greeting = "Greetings Epicodus Alumni"
+    @user = user
+
+    mail to: user.email, subject: "Spotlight of the Month"
   end
 end

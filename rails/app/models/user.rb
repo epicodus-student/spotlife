@@ -17,11 +17,7 @@ class User < ActiveRecord::Base
    return get_eligible.sample(size)
  end
 
- # def == (other)
- #   (self.id == other.id)
- # end
-
- private
+private
 
  def self.calculate_sample_size
    if User.all.length > 12
