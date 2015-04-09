@@ -15,7 +15,6 @@ Router.map(function() {
   this.route('request_emails', function() {
     this.route('new');
   });
-  this.route('work');
 });
 
 export default Router;
