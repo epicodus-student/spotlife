@@ -1,4 +1,4 @@
-class RequestEmail
+class Requestemail
 
   def initialize
     send_mail
@@ -9,5 +9,6 @@ class RequestEmail
       binding.pry
       UserMailer.create(to: user.email)
     end
+    return true
   end
 end
