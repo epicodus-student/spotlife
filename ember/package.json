@@ -38,6 +38,7 @@
     "rails-csrf": "2.0.1"
   },
   "dependencies": {
+    "ember-cli": "^0.2.3",
     "rails-csrf": "^2.0.1"
   }
 }
