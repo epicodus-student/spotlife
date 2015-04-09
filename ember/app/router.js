@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('protected');
   this.route('signup');
   this.resource('posts', function() {
-    this.route('new')
+    this.route('new');
   });
 });
 

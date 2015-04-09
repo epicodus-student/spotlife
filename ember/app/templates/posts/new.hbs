@@ -1,8 +1,7 @@
 <h4>Create new post</h4>
-<form {{action 'authenticate' on='submit'}}>
-  <label for='email'>Email</label>
-  {{input id='email' value=email}}
+<form {{action 'createPost' on='submit'}}>
+  <!-- needs user id -->
   <label for='body'>Body</label>
-  {{input id='body' type='password' value=body}}
+  {{input id='body' type='text' value=body}}
   <button type='submit'>Submit</button>
 </form>
