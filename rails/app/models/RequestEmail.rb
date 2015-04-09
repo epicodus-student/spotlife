@@ -7,7 +7,7 @@ class Requestemail
   def send_mail
     User.get_next_batch.each do |user|
       binding.pry
-      UserMailer.create(to: user.email)
+      UserMailer.update_request(user).deliver_now
     end
     return true
   end
