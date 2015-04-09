@@ -11,9 +11,8 @@ describe RequestEmail do
   describe '.get_recent_posts' do
 
     it 'Emails selected users' do
-      expect(Post.get_recent_posts.class).to eq(Array)
-      expect(Post.get_recent_posts.include?(@new_post)).to eq(true)
-      expect(Post.get_recent_posts.include?(@old_post)).to eq(false)
+
+      expect(RequestEmail.new).to eq(true)
     end
   end
 end
