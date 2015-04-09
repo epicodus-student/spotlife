@@ -2,10 +2,9 @@ class RequestEmailController < ApplicationController
 
   def create
     req_email = RequestEmail.new
-    if req_email
-      #respond to ember with success
-    else
-      #respond to ember with failure
+    respond_to do |format|
+      msg = { :status => "ok", :message => "Success!", :html => "<b>...</b>" }
+      format.json  { render :json => msg } # don't do msg.to_json
     end
   end
 
