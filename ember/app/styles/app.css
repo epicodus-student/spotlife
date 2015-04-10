@@ -1,0 +1,45 @@
+body {
+  text-align: center;
+}
+
+.main {
+  width: 540px;
+  margin: 100px auto;
+}
+
+.side {
+  float: right;
+}
+
+
+.rectangle {
+  font-size: 50px;
+  height: 150px;
+  margin-bottom: 5px;
+  font-family: Montserrat;
+  font-weight: 800;
+  text-shadow: 10px 10px 0px #000000;
+  background-color: #ff2783;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 100px;
+}
+
+.action {
+  margin: 30px 0 30px 0;
+}
+
+.left {
+  margin: 0 5px 0 -5px;
+}
+
+.button {
+
+}
+
+.rectangle a {
+  color: white;
+  text-decoration: none;
+}

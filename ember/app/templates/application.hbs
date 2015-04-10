@@ -1,17 +1,33 @@
-<h2 id="title">Welcome to Spotlife</h2>
+<div class="container">
+    <div class="main">
+      <div class="rectangle title row">
+        {{#link-to 'index'}}Spotlife{{/link-to}}
+      </div>
+      <div class="row">
+        <div class="col-xs-6 rectangle left">
+          <div class="action">
+            {{#link-to 'request_emails.new'}}Request{{/link-to}}
+          </div>
+        </div>
+        <div class="col-xs-6 rectangle right">
+          <div class="action">
+            {{#link-to 'spotlight_emails'}}Send{{/link-to}}
+          </div>
+        </div>
+      </div>
+      <div class="rectangle row button">
+        {{outlet}}
+      </div>
+    </div>
 
+    <div class="side">
+      {{#link-to 'posts'}}Posts{{/link-to}}
+      {{#if session.isAuthenticated}}
+        <button {{ action 'invalidateSession' }}>Logout</button>
+      {{else}}
+        {{#link-to 'login'}}Login{{/link-to}}
+        {{#link-to 'signup'}}Sign Up{{/link-to}}
+      {{/if}}
+    </div>
 
-{{#link-to 'index'}}Home{{/link-to}}
-{{#link-to 'posts'}}Posts{{/link-to}}
-{{#link-to 'request_emails.new'}}Request Spotlights{{/link-to}}
-{{#link-to 'spotlight_emails'}}Send Spotlights{{/link-to}}
-
-
-{{#if session.isAuthenticated}}
-  <button {{ action 'invalidateSession' }}>Logout</button>
-{{else}}
-  {{#link-to 'login'}}Login{{/link-to}}
-  {{#link-to 'signup'}}Sign Up{{/link-to}}
-{{/if}}
-
-{{outlet}}
+</div>
